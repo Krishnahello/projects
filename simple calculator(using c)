@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include<stdlib.h>
+int main()
+{
+    char ch,x;
+    double a,b;
+    while(1)
+    {
+        printf("enter any operation(+,-,*,/),if you want exit press x::\t");
+        scanf(" %c",&ch);
+        if(ch=='x')
+        {
+            printf("you are exited");
+            exit(0);
+        }
+        printf("enter first operand::\t");
+        scanf("%lf",&a);
+        printf("enter second operand::\t");
+        scanf("%lf",&b);
+        switch(ch)
+        {
+            //AXxdiition::
+            case '+':
+                printf("%.1lf + %.1lf = %.1lf\n",a,b,a+b);
+                break;
+            //Substraction::
+            case '-':
+                printf("%.1lf - %.1lf = %.1lf\n",a,b,a-b);
+                break;
+            //Multiplication::
+            case '*':
+                printf("%.1lf * %.1lf = %.1lf\n",a,b,a*b);
+                break;
+            //Division::
+            case '/':
+                if(b!=0)
+                {
+                printf("%.1lf / %.1lf = %.1lf\n",a,b,a/b);
+                 
+                }
+                else
+                {
+                    printf("Error! Division by zero is not allowed.\n");
+                }
+                break;
+        default:
+        {
+            printf("Error!,please enter the valid input!!");
+        }
+        }
+        printf("\n");
+    }
+}
